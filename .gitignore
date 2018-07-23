@@ -8,6 +8,11 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 
+.mvn/
+mvnw
+mvnw.cmd
+
+
 # IntelliJ project files 
 *.iml
 *.iws
