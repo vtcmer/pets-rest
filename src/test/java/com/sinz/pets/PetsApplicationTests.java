@@ -23,8 +23,6 @@ public class PetsApplicationTests {
 	}
 
 
-	
-
 	@Test
 	public void contextLoads() {
 	}
