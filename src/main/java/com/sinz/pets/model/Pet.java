@@ -12,6 +12,8 @@ public class Pet {
     private String species;
     private String breeds;
 
+    public Pet(){}
+
     public Pet(String name, String species, String breeds) {
         this.name = name;
         this.species = species;
