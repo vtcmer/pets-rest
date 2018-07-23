@@ -26,9 +26,6 @@ public class PetsApplicationTests {
 	public void contextLoads() {
 	}
 
-
-	
-
 	@Test
 	public void savePet(){
 		Pet pet = new Pet("boby","dog","Pastor Alemán");
