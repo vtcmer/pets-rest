@@ -2,6 +2,7 @@ package com.sinz.pets.controller;
 
 
 import com.sinz.pets.model.Pet;
+import com.sinz.pets.model.User;
 import com.sinz.pets.service.PetsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,10 +16,12 @@ public class PetsController {
     @Autowired
     private PetsService petsService;
 
+    //@CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/test", method = RequestMethod.GET)
-    public ResponseEntity<String> test(){
-        return ResponseEntity.ok("It is OK");
+    public  ResponseEntity<?> test(){
+        return new ResponseEntity<>(HttpStatus.OK);
     }
+
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<Pet> getPet(@PathVariable ("id")  String id){
