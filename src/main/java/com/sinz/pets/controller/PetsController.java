@@ -4,14 +4,20 @@ package com.sinz.pets.controller;
 import com.sinz.pets.model.Pet;
 import com.sinz.pets.model.User;
 import com.sinz.pets.service.PetsService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v1")
 public class PetsController {
+
+    private static final Logger logger = LoggerFactory.getLogger(PetsController.class);
 
     @Autowired
     private PetsService petsService;
@@ -19,7 +25,14 @@ public class PetsController {
     //@CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public  ResponseEntity<?> test(){
+        logger.info("Invoke test method");
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public ResponseEntity<List<Pet>> findAll() {
+        List<Pet> pets = this.petsService.findAll();
+        return  ResponseEntity.ok(pets);
     }
 
 
@@ -42,7 +55,7 @@ public class PetsController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-    public ResponseEntity<Pet> create(@PathVariable("id") String id, @RequestBody Pet pet){
+    public ResponseEntity<Pet> update(@PathVariable("id") String id, @RequestBody Pet pet){
         pet.setId(id);
         this.petsService.save(pet);
         return ResponseEntity.ok(pet);
