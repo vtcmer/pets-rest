@@ -2,6 +2,8 @@ package com.sinz.pets.model;
 
 public class User {
 
+    // Esta en master
+
     private String name;
 
     public String getName() {
