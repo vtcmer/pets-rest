@@ -1,5 +1,6 @@
 package com.sinz.pets.service;
 
+import com.sinz.pets.dao.PetsRepository;
 import com.sinz.pets.model.Pet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

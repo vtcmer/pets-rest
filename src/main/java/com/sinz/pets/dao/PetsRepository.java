@@ -1,4 +1,4 @@
-package com.sinz.pets.service;
+package com.sinz.pets.dao;
 
 import com.sinz.pets.model.Pet;
 import org.springframework.data.mongodb.repository.MongoRepository;
