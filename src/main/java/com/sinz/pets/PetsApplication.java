@@ -9,6 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @SpringBootApplication
 public class PetsApplication {
 	
+	// -- añadido comentario en imp/security
 	
 	// --incluido nueva línea
 	
