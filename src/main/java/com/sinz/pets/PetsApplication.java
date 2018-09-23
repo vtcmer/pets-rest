@@ -16,6 +16,11 @@ public class PetsApplication {
 	
 	// -- nueva rama del token
 	public static void main(String[] args) {
+		
+		// --VM IMPLEMMENTACIÓN DE https://auth0.com/blog/securing-spring-boot-with-jwts/
+		
+		// -- Una buena opción  https://www.callicoder.com/spring-boot-spring-security-jwt-mysql-react-app-part-2/
+		
 		SpringApplication.run(PetsApplication.class, args);
 	}
 	
