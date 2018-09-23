@@ -4,8 +4,11 @@ import com.sinz.pets.model.Pet;
 
 import java.util.List;
 
+import org.springframework.security.access.prepost.PreAuthorize;
+
 public interface PetsService {
 
+	
     List<Pet> findAll();
     Pet getById(final String id);
     Pet findBySpecies(final String specie);
